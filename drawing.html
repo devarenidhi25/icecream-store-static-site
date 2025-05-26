@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your Cone - Magic Cones 🎨</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./unicornLogo.png" alt="Brand Logo">
+            <h1>Magic Cones 🦄</h1>
+        </div>
+        <button id="menu-toggle">☰</button>
+        <nav class="navbar" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="stores.html">Stores</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#offers">Offers</a>
+            <a href="index.html#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="drawing-main">
+        <section class="drawing-hero">
+            <h1>🎨 Design Your Dream Cone!</h1>
+            <p>Let your creativity flow and design the perfect ice cream cone! ✨</p>
+        </section>
+
+        <section class="drawing-container">
+            <div class="drawing-tools">
+                <h3>🖌️ Drawing Tools</h3>
+                <div class="tool-group">
+                    <label>Brush Size:</label>
+                    <input type="range" id="brushSize" min="1" max="20" value="5">
+                    <span id="brushSizeValue">5</span>
+                </div>
+                <div class="tool-group">
+                    <label>Colors:</label>
+                    <div class="color-palette">
+                        <div class="color-option" data-color="#ff6781" style="background-color: #ff6781;"></div>
+                        <div class="color-option" data-color="#ffb3ba" style="background-color: #ffb3ba;"></div>
+                        <div class="color-option" data-color="#ffdfba" style="background-color: #ffdfba;"></div>
+                        <div class="color-option" data-color="#ffffba" style="background-color: #ffffba;"></div>
+                        <div class="color-option" data-color="#baffc9" style="background-color: #baffc9;"></div>
+                        <div class="color-option" data-color="#bae1ff" style="background-color: #bae1ff;"></div>
+                        <div class="color-option" data-color="#e3baff" style="background-color: #e3baff;"></div>
+                        <div class="color-option" data-color="#8B4513" style="background-color: #8B4513;"></div>
+                        <div class="color-option" data-color="#000000" style="background-color: #000000;"></div>
+                    </div>
+                </div>
+                <div class="tool-group">
+                    <button class="tool-btn" id="clearCanvas">🗑️ Clear</button>
+                    <button class="tool-btn" id="saveDesign">💾 Save Design</button>
+                    <button class="tool-btn" id="addStickers">✨ Add Stickers</button>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="drawingCanvas" width="600" height="400"></canvas>
+                <div class="canvas-instructions">
+                    <p>🖱️ Click and drag to draw your magical creation!</p>
+                </div>
+            </div>
+
+            <div class="design-options">
+                <h3>🍦 Customize Your Cone</h3>
+                <div class="option-group">
+                    <label>Cone Type:</label>
+                    <select id="coneType">
+                        <option value="waffle">🧇 Waffle Cone</option>
+                        <option value="sugar">🍯 Sugar Cone</option>
+                        <option value="cake">🧁 Cake Cone</option>
+                        <option value="chocolate">🍫 Chocolate Dipped</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label>Ice Cream Flavor:</label>
+                    <select id="flavorType">
+                        <option value="strawberry">🍓 Strawberry Dreams</option>
+                        <option value="chocolate">🍫 Chocolate Galaxy</option>
+                        <option value="mango">🥭 Mango Tango</option>
+                        <option value="coconut">🥥 Coconut Paradise</option>
+                        <option value="unicorn">🦄 Unicorn Swirl</option>
+                        <option value="cookie">🍪 Cookie Monster</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label>Special Toppings:</label>
+                    <div class="toppings-checkboxes">
+                        <label><input type="checkbox" value="sprinkles"> 🌈 Rainbow Sprinkles</label>
+                        <label><input type="checkbox" value="cherry"> 🍒 Cherry</label>
+                        <label><input type="checkbox" value="nuts"> 🥜 Nuts</label>
+                        <label><input type="checkbox" value="chocolate"> 🍫 Chocolate Chips</label>
+                        <label><input type="checkbox" value="glitter"> ✨ Edible Glitter</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sticker-panel" id="stickerPanel" style="display: none;">
+            <h3>✨ Magic Stickers</h3>
+            <div class="stickers-grid">
+                <div class="sticker" data-sticker="🦄">🦄</div>
+                <div class="sticker" data-sticker="🌈">🌈</div>
+                <div class="sticker" data-sticker="⭐">⭐</div>
+                <div class="sticker" data-sticker="💖">💖</div>
+                <div class="sticker" data-sticker="🎀">🎀</div>
+                <div class="sticker" data-sticker="🌟">🌟</div>
+                <div class="sticker" data-sticker="🎨">🎨</div>
+                <div class="sticker" data-sticker="🍓">🍓</div>
+            </div>
+        </section>
+
+        <section class="order-section">
+            <h2>🛒 Ready to Order Your Creation?</h2>
+            <div class="order-summary">
+                <h3>Your Design Summary:</h3>
+                <div id="orderSummary">
+                    <p>Cone: <span id="selectedCone">Waffle Cone</span></p>
+                    <p>Flavor: <span id="selectedFlavor">Strawberry Dreams</span></p>
+                    <p>Toppings: <span id="selectedToppings">None selected</span></p>
+                    <p class="total-price">Total: <span id="totalPrice">Rs. 139</span></p>
+                </div>
+            </div>
+            <button class="btn order-btn">🛒 Add to Cart</button>
+            <button class="btn share-btn">📱 Share Your Design</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social">
+                <h3>Follow Us! 📱</h3>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us 📞</h3>
+                <p>📧 hello@magiccones.com</p>
+                <p>📱 12345678</p>
+            </div>
+            <div class="legal">
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        <p>© 2025 Magic Cones - All Rights Reserved 🦄✨</p>
+    </footer>
+
+    <script src="drawing.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Locations - Magic Cones 🏪</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./unicornLogo.png" alt="Brand Logo">
+            <h1>Magic Cones</h1>
+        </div>
+        <button id="menu-toggle">☰</button>
+        <nav class="navbar" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="stores.html">Stores</a>
+            <a href="menu.html">Menu</a>
+            <a href="#offers">Offers</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="stores-main">
+        <section class="stores-hero">
+            <h1>🏪 Find Your Nearest Magic Cone!</h1>
+            <p>Discover magical ice cream locations near you! ✨</p>
+        </section>
+
+        <section class="store-finder">
+            <div class="finder-container">
+                <h2>🔍 Store Locator</h2>
+                <div class="search-box">
+                    <input type="text" placeholder="Enter your city or zip code..." id="locationInput">
+                    <button class="btn search-btn">🔍 Find Stores</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="stores-grid">
+            <h2>🌟 Our Magical Locations</h2>
+            <div class="stores-container">
+                <div class="store-card">
+                    <div class="store-header">
+                        <h3>🏙️ Downtown Magic</h3>
+                        <span class="store-status open">Open</span>
+                    </div>
+                    <div class="store-info">
+                        <p>📍 12 XYZ Street, Mumbai</p>
+                        <p>📞 12345678</p>
+                        <p>🕒 Mon-Sun: 10AM - 10PM</p>
+                        <div class="store-features">
+                            <span class="feature">🎨 Design Station</span>
+                            <span class="feature">🎂 Party Room</span>
+                            <span class="feature">🚗 Drive-Thru</span>
+                        </div>
+                    </div>
+                    <button class="btn store-btn">📍 Get Directions</button>
+                </div>
+
+                <div class="store-card">
+                    <div class="store-header">
+                        <h3>🌳 Park Avenue</h3>
+                        <span class="store-status open">Open</span>
+                    </div>
+                    <div class="store-info">
+                        <p>📍 45 ABC Road, Bengaluru</p>
+                        <p>📞 12345678</p>
+                        <p>🕒 Mon-Sun: 11AM - 9PM</p>
+                        <div class="store-features">
+                            <span class="feature">🎨 Design Station</span>
+                            <span class="feature">🌳 Outdoor Seating</span>
+                            <span class="feature">🎪 Kids Play Area</span>
+                        </div>
+                    </div>
+                    <button class="btn store-btn">📍 Get Directions</button>
+                </div>
+
+                <div class="store-card">
+                    <div class="store-header">
+                        <h3>🏖️ Beachside Bliss</h3>
+                        <span class="store-status open">Open</span>
+                    </div>
+                    <div class="store-info">
+                        <p>📍 78 LMN Road, Chennai</p>
+                        <p>📞 12345678</p>
+                        <p>🕒 Mon-Sun: 9AM - 11PM</p>
+                        <div class="store-features">
+                            <span class="feature">🎨 Design Station</span>
+                            <span class="feature">🏖️ Beach View</span>
+                            <span class="feature">🍹 Smoothies</span>
+                        </div>
+                    </div>
+                    <button class="btn store-btn">📍 Get Directions</button>
+                </div>
+
+                <div class="store-card">
+                    <div class="store-header">
+                        <h3>🛍️ Mall Magic</h3>
+                        <span class="store-status closed">Closed</span>
+                    </div>
+                    <div class="store-info">
+                        <p>📍 32 PQR Street, Delhi</p>
+                        <p>📞 12345678</p>
+                        <p>🕒 Mon-Sat: 10AM - 9PM, Sun: 12PM - 6PM</p>
+                        <div class="store-features">
+                            <span class="feature">🎨 Design Station</span>
+                            <span class="feature">🛍️ Food Court</span>
+                            <span class="feature">🎮 Arcade Nearby</span>
+                        </div>
+                    </div>
+                    <button class="btn store-btn">📍 Get Directions</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="coming-soon">
+            <h2>🚀 Coming Soon!</h2>
+            <div class="coming-soon-grid">
+                <div class="coming-soon-card">
+                    <h3>🏔️ Mountain View</h3>
+                    <p>Opening Spring 2025!</p>
+                    <p>📍 Highland Shopping District</p>
+                </div>
+                <div class="coming-soon-card">
+                    <h3>🌆 Riverside</h3>
+                    <p>Opening Summer 2025!</p>
+                    <p>📍 101 Street, Pune</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="franchise-info">
+            <h2>💼 Interested in Franchising?</h2>
+            <p>Bring the magic to your community! Contact us about franchise opportunities.</p>
+            <button class="btn franchise-btn">📧 Contact Franchise Team</button>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="social">
+                <h3>Follow Us! 📱</h3>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us 📞</h3>
+                <p>✉️ hello@magiccones.com</p>
+                <p>📱 12345678</p>
+                <p>📍  abc-xyz Street</p>
+            </div>
+            <div class="legal">
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        <p>© 2025 Magic Cones - All Rights Reserved 🦄✨</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
