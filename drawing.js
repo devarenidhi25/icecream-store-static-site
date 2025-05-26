@@ -203,32 +203,32 @@ document.addEventListener("DOMContentLoaded", function() {
         ctx.strokeStyle = '#ddd';
         ctx.lineWidth = 2;
         ctx.setLineDash([5, 5]);
-        
-        // Draw cone shape
+
+        // 🍦 Inverted cone (tip at bottom)
         ctx.beginPath();
-        ctx.moveTo(250, 350);
-        ctx.lineTo(300, 200);
-        ctx.lineTo(350, 350);
+        ctx.moveTo(250, 200);      // Left base of cone
+        ctx.lineTo(300, 350);      // Tip of the cone (downward)
+        ctx.lineTo(350, 200);      // Right base of cone
         ctx.closePath();
         ctx.stroke();
-        
-        // Draw ice cream scoops
+
+        // 🍨 Scoops on top of cone
         ctx.beginPath();
         ctx.arc(300, 180, 30, 0, 2 * Math.PI);
         ctx.stroke();
-        
+
         ctx.beginPath();
-        ctx.arc(300, 140, 25, 0, 2 * Math.PI);
+        ctx.arc(300, 135, 25, 0, 2 * Math.PI);
         ctx.stroke();
-        
+
         ctx.beginPath();
-        ctx.arc(300, 110, 20, 0, 2 * Math.PI);
+        ctx.arc(300, 100, 20, 0, 2 * Math.PI);
         ctx.stroke();
-        
+
         // Reset line dash
         ctx.setLineDash([]);
-        
-        // Add helper text
+
+        // ✨ Helper text
         ctx.fillStyle = '#ccc';
         ctx.font = '14px Poppins';
         ctx.textAlign = 'center';
@@ -236,6 +236,7 @@ document.addEventListener("DOMContentLoaded", function() {
         ctx.fillText('Use the outline as a guide ✨', 300, 380);
         ctx.textAlign = 'left';
     }
+
     
     // Draw initial outline
     drawConeOutline();
